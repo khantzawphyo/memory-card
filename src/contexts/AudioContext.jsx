@@ -12,7 +12,7 @@ export function AudioProvider({ children }) {
 
   const [playClick] = useSound(SOUNDS.click, {
     volume: 0.5,
-    // soundEnabled: isSoundOn,
+    soundEnabled: isSoundOn,
     interrupt: true,
   });
   const [playFlick] = useSound(SOUNDS.flick, {

@@ -42,10 +42,20 @@ function Button({
   };
 
   const handleClick = (e) => {
-    playClick();
+    const isAudioToggle =
+      props['aria-label']?.toLowerCase().includes('sound') ||
+      props['aria-label']?.toLowerCase().includes('music');
+
+    if (isAudioToggle) {
+      playClick();
+    } else {
+      playClick();
+    }
+
     if (onClick) onClick(e);
   };
 
+  
   const baseStyles =
     'relative cursor-pointer flex items-center justify-center font-black uppercase select-none';
 
